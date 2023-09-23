@@ -12,6 +12,8 @@
 	let newTodo = '';
 
 	const addTodo = (e) => {
+		if (newTodo === '') return;
+
 		todos = [...todos, { title: newTodo, completed: false, id: todos.length + 1 }];
 		newTodo = '';
 	};
